@@ -33,3 +33,5 @@ SecurityTest의
 - pom.xml 복붙(의존성)
 - web.xml에 필터작업(인코딩 필터도 겸사겸사 복사)
 - security-context.xml
+- Handler 복사
+
