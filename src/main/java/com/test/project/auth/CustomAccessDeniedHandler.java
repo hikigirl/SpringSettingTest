@@ -17,7 +17,7 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
 			AccessDeniedException accessDeniedException) throws IOException, ServletException {
 		// 403 발생 -> handle() 호출
 		// 403 에러 발생과 연관된 여러가지 업무 처리
-		System.out.println("403 에러 관련 처리 진행");
+		System.out.println("403 에러 관련 처리 진행(csrf 토큰이없거나 권한이 없음)");
 		
 		response.sendRedirect("/project/");
 	}

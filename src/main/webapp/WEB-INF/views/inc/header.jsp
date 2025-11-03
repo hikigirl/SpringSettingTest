@@ -7,8 +7,23 @@
 	<header>
 		<h1>Spring Project</h1>
 		<ul>
+			<sec:authorize access="isAnonymous()">
 			<li><a href="/project/member/add">회원가입</a></li>
 			<li><a href="/project/member/login">로그인</a></li>
-			<li><a href="/project/member/logout">로그아웃</a></li>
+			</sec:authorize>
+			<sec:authorize access="isAuthenticated()">
+			<li><a href="#!" id="btnLogOut">로그아웃</a></li>
+			</sec:authorize>
 		</ul>
 	</header>
+
+	<form action="/project/member/logout" method="post" id="formLogOut">
+		<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+	</form>
+	
+	<script>
+		document.getElementById('btnLogOut').onclick = () => {
+			document.getElementById('formLogOut').submit();
+		};
+	
+	</script>

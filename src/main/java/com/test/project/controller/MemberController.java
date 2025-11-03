@@ -21,6 +21,7 @@ public class MemberController {
 	public String add() {
 		return "member.add"; //회원 가입
 	}
+	
 	@PostMapping("/member/addok") 
 	public String addok(UserDTO dto) {
 		System.out.println(dto);
@@ -29,5 +30,11 @@ public class MemberController {
 		mapper.add(dto);
 		
 		return "redirect:/";
+	}
+	
+	@GetMapping("/member/login")
+	public String login() {
+		
+		return "member.login";
 	}
 }

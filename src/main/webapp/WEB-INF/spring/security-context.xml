@@ -28,10 +28,10 @@
 		<security:access-denied-handler ref="customAccessDeniedHandler"/>
 				
 		<!-- 10. 로그아웃 처리 -->
-		<security:logout logout-url="/logout.do" invalidate-session="true" logout-success-url="/index.do"/>
+		<security:logout logout-url="/member/logout" invalidate-session="true" logout-success-url="/"/>
 		
 		<!-- 11. 로그인 후 처리 핸들러 연결 -->
-		<security:form-login login-page="/login.do" authentication-success-handler-ref="customLoginSuccessHandler"/>
+		<security:form-login login-page="/member/login" authentication-success-handler-ref="customLoginSuccessHandler"/>
 		
 	</security:http>
 

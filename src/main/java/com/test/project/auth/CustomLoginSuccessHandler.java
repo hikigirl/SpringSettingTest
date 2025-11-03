@@ -59,7 +59,7 @@ public class CustomLoginSuccessHandler implements AuthenticationSuccessHandler {
 			
 		} else {
 			//로그인 이전에 요청한 URL 없음
-			response.sendRedirect("/java/index.do");
+			response.sendRedirect("/project/");
 		}
 		
 	}
