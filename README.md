@@ -48,3 +48,8 @@ SecurityTest의
 - views/layout/main.jsp
 - com.test.project.controller.MainController.java
 - tiles.xml
+
+#### 파일업로드 세팅
+FileTest의
+- 의존성은 따로 없음(pom.xml)
+- web.xml
