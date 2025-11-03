@@ -35,3 +35,8 @@ SecurityTest의
 - security-context.xml
 - Handler 복사
 
+#### DB 설계
+- script.sql
+- security 설계를 위해 일단 회원 테이블 스키마부터 설계
+- UserDTO.java
+- CustomUser.java

@@ -5,9 +5,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import com.test.java.model.CustomUser;
-import com.test.java.model.MemberDTO;
-import com.test.java.model.MemberMapper;
+import com.test.project.mapper.MemberMapper;
+import com.test.project.model.CustomUser;
+import com.test.project.model.UserDTO;
 
 //User -> CustomUser 사용
 public class CustomUserDetailsService implements UserDetailsService{
@@ -22,7 +22,7 @@ public class CustomUserDetailsService implements UserDetailsService{
 	//로그인 발생 시 같이 호출되는 메서드
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		MemberDTO dto = mapper.get(username);
+		UserDTO dto = mapper.get(username);
 		
 		return dto != null ? new CustomUser(dto) : null;
 	}
