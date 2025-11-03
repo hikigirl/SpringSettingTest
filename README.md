@@ -53,3 +53,8 @@ SecurityTest의
 FileTest의
 - 의존성은 따로 없음(pom.xml)
 - web.xml
+
+#### Ajax > REST Controller
+- pom.xml -> Jackson databind
+- com.test.project.restController 패키지: Rest 컨트롤러, json을 돌려줌. 일반 컨트롤러는 jsp를 돌려준다.
+  - AjaxController.java
