@@ -42,5 +42,5 @@
 
 	<!-- 추가: 인터페이스 매퍼의 구현체가 스프링 빈으로 등록될 수 있게 스캔 설정 -->
 	<mybatis-spring:scan
-		base-package="com.test.java.mapper" />
+		base-package="com.test.project.mapper" />
 </beans>

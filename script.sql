@@ -8,3 +8,11 @@ create table tblUser(
     regdate date default sysdate not null,
     auth varchar2(50) not null --ROLE_MEMBER, ROLE_ADMIN
 );
+insert into tblUser(id, name, pw, email, age, regdate, auth)
+values('hong', '홍길동', '1111','hong@gmail.com',
+       20, default,'ROLE_MEMBER');
+commit;
+select * from tbluser;
+
+delete from tbluser;
+commit;
