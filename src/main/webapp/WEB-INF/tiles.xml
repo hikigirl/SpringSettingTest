@@ -4,7 +4,6 @@
        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
 <tiles-definitions>
 	<!-- definition의 template: 레이아웃 페이지 -->
-	<definition></definition>
-	
+	<definition name="index" template="WEB-INF/views/layout/main.jsp"></definition>
 	
 </tiles-definitions>

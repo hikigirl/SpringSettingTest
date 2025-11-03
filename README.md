@@ -40,3 +40,10 @@ SecurityTest의
 - security 설계를 위해 일단 회원 테이블 스키마부터 설계
 - UserDTO.java
 - CustomUser.java
+
+#### MyBatis 세팅 마무리
+- 단위테스트
+
+#### Tiles 세팅
+- views/layout/main.jsp
+- com.test.project.controller.MainController.java
