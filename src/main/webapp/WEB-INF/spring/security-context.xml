@@ -21,7 +21,8 @@
 
 	<security:http>
 		<!-- 허가 -->
-		<security:intercept-url pattern="/index.do" access="permitAll"/>
+		<security:intercept-url pattern="/" access="permitAll"/>
+		<!-- <security:intercept-url pattern="/" access="hasRole('ROLE_MEMBER')"/> -->
 
 		<!-- 8.1 403 Forbidden 처리(핸들러) -->
 		<security:access-denied-handler ref="customAccessDeniedHandler"/>

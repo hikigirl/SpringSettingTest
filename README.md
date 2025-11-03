@@ -47,3 +47,4 @@ SecurityTest의
 #### Tiles 세팅
 - views/layout/main.jsp
 - com.test.project.controller.MainController.java
+- tiles.xml
