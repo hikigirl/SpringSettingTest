@@ -7,4 +7,6 @@ public interface MemberMapper {
 
 	UserDTO get(String username); //customuserdetailsservice
 
+	void add(UserDTO dto); //membercontroller(insert)
+
 }

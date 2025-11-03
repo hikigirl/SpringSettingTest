@@ -16,7 +16,7 @@
 - 의존성 추가 필요
 
 ---
-
+### Spring Legacy Project 세팅
 #### MyBatis 세팅
 SecurityTest의
 - pom.xml 복붙
@@ -58,3 +58,27 @@ FileTest의
 - pom.xml -> Jackson databind
 - com.test.project.restController 패키지: Rest 컨트롤러, json을 돌려줌. 일반 컨트롤러는 jsp를 돌려준다.
   - AjaxController.java
+
+---
+### 업무 구현
+1. 회원 관련
+   1. 가입
+   2. 로그인/로그아웃
+2. 게시판(CRUD)
+
+---
+### 파일
+- Java
+  - com.test.project.controller
+    - `MemberController.java`
+  - com.test.project.mapper
+    - `MemberMapper.java`
+  - com.test.project.model
+    - `CustomUser.java`
+    - `UserDTO.java`
+- views
+  - content/member
+    - `add.jsp`
+    - `login.jsp`
+  - inc
+    - `header.jsp`

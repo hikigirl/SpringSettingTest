@@ -16,7 +16,10 @@
 			regdate, 
 			auth
 		from tblUser where id = #{username}
-	
 	</select>
+	<insert id="add" parameterType="udto">
+		insert into tblUser(id, name, pw, email, age, regdate, auth) 
+			values(#{id}, #{name}, #{pw}, #{email}, #{age}, default, 'ROLE_MEMBER')
+	</insert>
 	
 </mapper>

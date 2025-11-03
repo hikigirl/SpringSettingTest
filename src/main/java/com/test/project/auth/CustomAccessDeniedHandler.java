@@ -19,7 +19,7 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
 		// 403 에러 발생과 연관된 여러가지 업무 처리
 		System.out.println("403 에러 관련 처리 진행");
 		
-		response.sendRedirect("/java/accesserror.do");
+		response.sendRedirect("/project/");
 	}
 
 }
