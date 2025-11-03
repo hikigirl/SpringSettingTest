@@ -18,3 +18,18 @@
 ---
 
 #### MyBatis 세팅
+SecurityTest의
+- pom.xml 복붙
+- root-context.xml
+
+#### Tiles 세팅
+TilesTest의
+- pom.xml 복붙
+- servlet-context 복붙
+- tiles.xml 복붙
+
+#### Security 세팅
+SecurityTest의
+- pom.xml 복붙(의존성)
+- web.xml에 필터작업(인코딩 필터도 겸사겸사 복사)
+- security-context.xml
