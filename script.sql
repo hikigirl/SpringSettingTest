@@ -16,3 +16,29 @@ select * from tbluser;
 
 delete from tbluser;
 commit;
+
+
+--게시판 테이블
+create table tblBoard(
+    seq number primary key,
+    subject varchar2(1000) not null,
+    content varchar2(2000) not null,
+    regdate date default sysdate not null,
+    id varchar2(50) not null references tblUser(id)
+);
+
+create sequence seqBoard;
+
+select * from tblBoard;
+
+
+select b.seq, b.subject, b.regdate, b.id as bid, u.id as uid, u.name
+from tblBoard b
+inner join tblUser u
+	on u.id = b.id
+order by b.seq desc;
+
+insert into tblBoard values(seqBoard.nextval, '게시판입니다.', '내용입니다.', default, 'hong');
+commit;
+
+select

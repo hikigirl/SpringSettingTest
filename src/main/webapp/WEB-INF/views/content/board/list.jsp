@@ -1,14 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<title>Insert title here</title>
-	<link rel="stylesheet" href="http://bit.ly/3WJ5ilK" />
-</head>
-<body>
-	<!-- .jsp -->
-	
-</body>
-</html>
+<!-- list.jsp -->
+<table>
+	<tr>
+		<th>번호</th>
+		<th>제목</th>
+		<th>날짜</th>
+		<th>이름</th>
+	</tr>
+	<c:forEach items="${list}" var="dto">
+	<tr>
+		<td>${dto.seq}</td>
+		<td>${dto.subject}</td>
+		<td>${dto.regdate}</td>
+		<td>${dto.udto.name}</td>
+	</tr>
+	</c:forEach>
+</table>
+
+<div><button type="button" onclick="location.href='/project/board/add';">글쓰기</button></div>

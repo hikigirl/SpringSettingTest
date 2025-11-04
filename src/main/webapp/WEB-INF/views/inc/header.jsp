@@ -14,6 +14,8 @@
 			<sec:authorize access="isAuthenticated()">
 			<li><a href="#!" id="btnLogOut">로그아웃</a></li>
 			</sec:authorize>
+			<li class="divider"/>
+			<li><a href="/project/board/list">게시판</a></li>
 		</ul>
 	</header>
 
