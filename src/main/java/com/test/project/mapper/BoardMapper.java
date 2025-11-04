@@ -10,4 +10,10 @@ public interface BoardMapper {
 
 	void add(BoardDTO dto);
 
+	BoardDTO get(String seq);
+
+	void edit(BoardDTO dto);
+
+	void del(String seq);
+
 }

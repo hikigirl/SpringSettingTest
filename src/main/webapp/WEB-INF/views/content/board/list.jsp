@@ -11,7 +11,9 @@
 	<c:forEach items="${list}" var="dto">
 	<tr>
 		<td>${dto.seq}</td>
-		<td>${dto.subject}</td>
+		<td>
+			<a href="/project/board/view?seq=${dto.seq}">${dto.subject}</a>
+		</td>
 		<td>${dto.regdate}</td>
 		<td>${dto.udto.name}</td>
 	</tr>

@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.test.project.mapper.BoardMapper;
 import com.test.project.model.BoardDTO;
+import com.test.project.model.CustomUser;
+import com.test.project.model.UserDTO;
 
 import lombok.RequiredArgsConstructor;
 
@@ -29,7 +31,11 @@ public class BoardController {
 	}
 	
 	@GetMapping("/board/view") 
-	public String view(Model model){
+	public String view(Model model, String seq){
+		
+		BoardDTO dto = mapper.get(seq);
+		model.addAttribute("dto", dto);
+		
 		return "board.view";
 	}
 	
@@ -40,19 +46,42 @@ public class BoardController {
 	
 	@PostMapping("/board/addok")
 	public String addok(Model model, BoardDTO dto, Authentication auth) {
-		System.out.println("auth: " + auth);
-		//mapper.add(dto);
+		//System.out.println("auth: " + auth);
+		
+		CustomUser cuser = (CustomUser)auth.getPrincipal();
+		UserDTO udto = cuser.getUdto();
+//		System.out.println(cuser.getUsername());
+//		System.out.println(udto.getId());
+
+		dto.setId(udto.getId());
+		
+		mapper.add(dto);
+		
 		return "redirect:/board/list";
 	}
 	
 	@GetMapping("/board/edit") 
-	public String edit(Model model){
+	public String edit(Model model, String seq){
+		
+		BoardDTO dto = mapper.get(seq);
+		model.addAttribute("dto", dto);
+		
 		return "board.edit";
 	}
 	
+	@PostMapping("/board/editok")
+	public String editok(Model model, BoardDTO dto){
+		mapper.edit(dto);
+		return "redirect:/board/view?seq="+dto.getSeq();
+	}
+	
+	
 	@GetMapping("/board/del") 
-	public String del(Model model){
-		return "board.del";
+	public String del(Model model, String seq){
+		
+		mapper.del(seq);
+		
+		return "redirect:/board/list";
 	}
 	
 }
