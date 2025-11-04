@@ -102,3 +102,11 @@ FileTest의
   - `header.jsp`
 - layout
   - `main.jsp`
+
+### 게시판 정책
+- 익명 사용자
+  - list.do
+  - view.do
+  - ~~add.do, edit.do, del.do~~
+- 회원
+  - 내가쓴글 -> edit, del -> security 아님
