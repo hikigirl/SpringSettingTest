@@ -68,17 +68,37 @@ FileTest의
 
 ---
 ### 파일
-- Java
-  - com.test.project.controller
-    - `MemberController.java`
-  - com.test.project.mapper
-    - `MemberMapper.java`
-  - com.test.project.model
-    - `CustomUser.java`
-    - `UserDTO.java`
-- views
-  - content/member
-    - `add.jsp`
-    - `login.jsp`
-  - inc
-    - `header.jsp`
+#### src/main/java
+- com.test.project.controller
+ - `MemberController.java`
+ - `BoardController.java`
+- com.test.project.mapper
+ - `MemberMapper.java`(I)
+ - `BoardMapper.java`(I)
+- com.test.project.model
+ - `CustomUser.java`
+ - `UserDTO.java`
+ - `BoardDTO.java`
+#### src/main/resources
+- mappers
+  - `MemberMapper.xml`
+  - `BoardMapper.xml`
+#### webapp/WEB-INF
+  - `web.xml`
+  - `tiles.xml`
+#### webapp/WEB-INF/views
+- content
+  - `index.jsp`
+- content/member
+  - `add.jsp`
+  - `login.jsp`
+- content/board
+  - `list.jsp`
+  - `view.jsp`
+  - `add.jsp`
+  - `edit.jsp`
+  - `del.jsp`
+- inc
+  - `header.jsp`
+- layout
+  - `main.jsp`
